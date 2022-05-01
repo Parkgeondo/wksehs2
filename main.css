@@ -1,0 +1,272 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body{
+    height: 100%;
+    background-color: #FBFBFB;
+}
+
+header{
+}
+
+header nav{
+    padding: 0 40px;
+    z-index: 1;
+	margin-left:auto;
+	margin-right:auto;
+	max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+}
+
+header .logo {}
+
+.search{
+    position: relative;
+}
+
+.search input{
+    border: 1px #657058 solid;
+}
+
+.search input[type=text]{
+    width: 200px;
+    padding: 12px 0 12px 30px;
+    margin-right: -6px;
+    border-radius: 40px 0 0 40px;
+    border-right: none;
+    background-color: transparent;
+}
+.search input[type=submit]{
+    width: 100px;
+    padding: 12px;
+    border-radius: 0 40px 40px 0;
+    border-left: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+input:focus{
+    outline: none;
+}
+
+.search input[type=text]::placeholder {
+
+}
+.search i{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 24px;
+    color: #6B6C66;
+    cursor: pointer;
+}
+
+
+main{
+    padding: 5vh 40px;
+    margin-left:auto;
+	margin-right:auto;
+    display: flex;
+    max-width: 1500px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hero {
+    /* border: 1px red solid; */
+    width: 500px;
+    margin-top: 20px;
+}
+.hero h1{
+    font-family: 'Noto Sans', sans-serif;
+    color: #2f3028;
+    font-size: 76px;
+    margin-bottom: 50px;
+    line-height: 70px;
+    letter-spacing :-3px;
+}
+.hero p{
+    font-family: 'Noto Sans', sans-serif;
+    color: rgba(47, 48, 40, 90%);
+    font-size: 15px;
+    line-height: 160%;
+    margin-bottom: 100px;
+}
+
+.hero button{
+    color: black;
+    background-color: #FBFBFB;
+    width: 55px;
+    height: 55px;
+    border-radius:50%;
+    border: solid 0.6px black;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero button span{
+    font-size: 26px;
+    position: absolute;
+    transform: translate(-50%,-55%);
+}
+
+.hero button.plus{
+    margin-right: 16px;
+}
+.hero button.minus{}
+
+.furniture-image {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.furniture-image figcaption{
+    position: absolute;
+    top: 13%;
+    right: 10%;
+    width: 330px;
+    border-radius: 90px;
+    background-color: #25252790;
+    z-index: 3;
+    backdrop-filter: blur(40px);
+    padding: 50px;
+    line-height: 160%;
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    display: none;
+    animation: move 0.1s linear;
+}
+
+.furniture-image .cursor {
+    background-color:#FBFBFB90;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 48.6%;
+    top: 60.6%;
+    z-index: 3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.furniture-image .cursor_2{
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    transform: scale(100%);
+    left: 48%;
+    top: 60%;
+    z-index: 2;
+    border-radius: 50%;
+    border: 1px solid #FBFBFB90;
+    animation-name: calltoaction;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.furniture-image .cursor:hover .cursor_2{
+    border: 4px solid #FBFBFB90;
+}
+
+/* 커서 애니메이션 */
+@keyframes calltoaction{
+    0% {transform: scale(80%);}
+    100% {transform: scale(160%);
+    border: 1px solid transparent;}
+}
+
+/* 나타나는 애니메이션*/
+@keyframes move {
+    0% {
+        opacity: 0;
+        margin-top: 10px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+    
+}
+
+/* 의자 옆에 번호 박스 늘어나게 하는 애니메이션 */
+@keyframes long{
+    0% {height: 0%;}
+    100% {height: 50px;}
+}
+
+.furniture-image img {
+    position: absolute;
+    width: 619px;
+    height: 561px;
+    bottom: -60px;
+    left: -140px;
+    z-index: 1;
+}
+.furniture-image .background {
+    position: absolute;
+    background-color: #E5FF5E;
+    width: 600px;
+    height: 600px;
+    top: 0;
+    right: 50px;
+    border-radius: 50%;
+}
+.furniture-image .number{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.furniture-image .number div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.furniture-image .number div h2{
+    font-size: 20px;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+}
+
+.furniture-image .number div h2:nth-child(1)+div{
+    width: 2px;
+    height: 50px;
+    background-color: #96A933;
+    display: none;
+    animation-name: long;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+.furniture-image .number div h2:nth-child(2)+div{
+    width: 2px;
+    height: 50px;
+    background-color: #96A933;
+    display: none;
+    animation-name: long;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+.furniture-image .number div h2:nth-child(3)+div{
+    width: 2px;
+    height: 50px;
+    background-color: #96A933;
+    display: none;
+    animation-name: long;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+
+.indicator {
+}
+
+.indicator .box{
+    background-color: #E5FF5E;
+    width: 10px;
+    height: 10px;
+}
+.indicator .now{}
+
