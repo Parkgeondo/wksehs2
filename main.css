@@ -1,5 +1,7 @@
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
+:root{
+    --img-height:600px;
+}
 body{
     height: 100%;
     background-color: #FBFBFB;
@@ -20,7 +22,11 @@ header nav{
     height: 120px;
 }
 
-header .logo {}
+header .logo {
+    font-size: 24px;
+    color: #2f3028d7;
+    font-weight: 900;
+}
 
 .search{
     position: relative;
@@ -71,7 +77,6 @@ main{
     max-width: 1500px;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .hero {
     /* border: 1px red solid; */
@@ -111,34 +116,57 @@ main{
     transform: translate(-50%,-55%);
 }
 
-.hero button.plus{
+.hero button.left{
     margin-right: 16px;
 }
-.hero button.minus{}
+.hero button.right{}
 
 .furniture-image {
     position: relative;
     width: 600px;
-    height: 600px;
+    height: var(--img-height);
 }
 
-.furniture-image figcaption{
+.furniture-image figcaption.modal{
     position: absolute;
-    top: 13%;
-    right: 10%;
+    top: 7%;
+    right: 0;
     width: 330px;
     border-radius: 90px;
     background-color: #25252790;
     z-index: 3;
     backdrop-filter: blur(40px);
     padding: 50px;
-    line-height: 160%;
     color: white;
-    font-weight: 100;
-    font-size: 14px;
     display: none;
     animation: move 0.1s linear;
 }
+
+.furniture-image figcaption.modal .name{
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    display: inline-block;
+}
+.furniture-image figcaption.modal .price{
+    float: right;
+    font-size: 16px;
+    margin: 0;
+}
+.furniture-image figcaption.modal .detail{
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0;
+    text-align: justify;
+}
+.furniture-image figcaption.modal .more{
+    margin: 10px 0 0 0;
+    font-size: 10px;
+    float: right;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 .furniture-image .cursor {
     background-color:#FBFBFB90;
@@ -167,10 +195,6 @@ main{
     animation-iteration-count: infinite;
 }
 
-.furniture-image .cursor:hover .cursor_2{
-    border: 4px solid #FBFBFB90;
-}
-
 /* 커서 애니메이션 */
 @keyframes calltoaction{
     0% {transform: scale(80%);}
@@ -197,12 +221,13 @@ main{
     100% {height: 50px;}
 }
 
+
 .furniture-image img {
     position: absolute;
     width: 619px;
     height: 561px;
     bottom: -60px;
-    left: -140px;
+    left: -100px;
     z-index: 1;
 }
 .furniture-image .background {
@@ -211,7 +236,7 @@ main{
     width: 600px;
     height: 600px;
     top: 0;
-    right: 50px;
+    right: 0px;
     border-radius: 50%;
 }
 .furniture-image .number{
@@ -219,12 +244,7 @@ main{
     right: 0px;
     bottom: 0px;
 }
-.furniture-image .number div{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
+
 .furniture-image .number div h2{
     font-size: 20px;
     font-weight: 400;
@@ -232,41 +252,102 @@ main{
     position: relative;
 }
 
-.furniture-image .number div h2:nth-child(1)+div{
-    width: 2px;
-    height: 50px;
-    background-color: #96A933;
-    display: none;
-    animation-name: long;
-    animation-duration: 0.4s;
-    animation-iteration-count: 1;
-}
-.furniture-image .number div h2:nth-child(2)+div{
-    width: 2px;
-    height: 50px;
-    background-color: #96A933;
-    display: none;
-    animation-name: long;
-    animation-duration: 0.4s;
-    animation-iteration-count: 1;
-}
-.furniture-image .number div h2:nth-child(3)+div{
-    width: 2px;
-    height: 50px;
-    background-color: #96A933;
-    display: none;
-    animation-name: long;
-    animation-duration: 0.4s;
-    animation-iteration-count: 1;
+.carousel {
+    position: absolute;
+    right: -18px;
+    top: 269px;
+    width: 10px;
+    height: 10px;
+    background-color: #2f302875;
+    border-radius: 50%;
 }
 
 .indicator {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .indicator .box{
-    background-color: #E5FF5E;
-    width: 10px;
-    height: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 12px 0 12px 0;
 }
-.indicator .now{}
 
+@media only screen and (max-width: 1200px) {
+    body {
+    }
+    main{
+        padding: 5vh 40px;
+        margin-left:auto;
+        margin-right:auto;
+        display: flex;
+        max-width: 1500px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hero{
+        width: 100%;
+        margin-top: -30px;
+    }
+    .hero h1{
+        text-align: center;
+        font-size: 120px;
+        line-height: 110%;
+        margin-bottom: 90px;
+    }
+    .hero p{
+        text-align: center;
+        font-size: 26px;
+        line-height: 160%;
+        margin-bottom: 120px;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .search{
+        display: none;
+    }
+    .indicator {
+        display: none;
+    }
+    .carousel {
+        display: none;
+    }
+    .furniture-image {
+        transform: scale(110%) translateX(40px);
+        margin-bottom: 100px;
+    }
+    .furniture-image img{
+        transform: translateX(20px);
+    }
+
+    .hero button{
+        color: black;
+        background-color: transparent;
+        width: 120px;
+        height: 120px;
+        border-radius:0%;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .hero button span{
+        font-size: 26px;
+        position: absolute;
+        transform: translate(-50%,-55%);
+    }
+    
+    .hero button.left{
+        margin-right: 16px;
+    }
+    .hero button.right{
+
+    }
+  }
