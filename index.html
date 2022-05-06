@@ -6,57 +6,187 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1 class="logo">Make Life</h1>
-            <form class="search">
-                <input type="text" placeholder="Search">
-                <input type="submit" value=" ">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </form>
-        </nav>
-    </header>
-
     <main>
-        <div class="hero">
-            <h1>Furniture<br>for your life</h1>
-            <p>당신의 집에 들이는 가구는 당신의 삶과 함께합니다. <br>
-                이곳에서 당신의 인생을 함께할 가구를 골라보세요. <br>
-                이미지를 클릭하면 상세한 정보를 볼 수 있습니다. <br>
-            </p>
-            <button class="left">	<span> &#8592; </span> </button>
-            <button class="right"> 	<span> &#8594; </span> </button>
-        </div>
-        <figure class="furniture-image">
-            <figcaption id="modal-notice" class="modal">
-                <h3 class="name">한샘 패브릭 소파</h3><span class="price">287,000 won</span>
-                <p class="detail">견고하게 뻩은 목제 다리와 부드럽게 곡선으로 안아주는 형태의 등받이로 디자인에 전체적인 조화를 더했습니다. 주방,카페,라운지 등 어떤 공간에서도 감각적인 연출을 해보세요.</p>
-                <span class="more">자세히보기</span>
-            </figcaption>
-            <div class="cursor"></div>
-            <div class="cursor_2"></div>
-            <img src="pngwing_1.png" alt="">
-            <div class="background"></div>
-            <div class="carousel"></div>
-            <div class="indicator">
-                <div class="box box_1"></div>
-                <div class="box box_2"></div>
-                <div class="box box_3"></div>
+        <header>
+            <div class="container_header">
+                <div class="item">
+                    <h1>MATERIAL DESIGN</h1>
+                </div>
+                <div class="item"></div>
+                <div class="item">
+                    <a href="#">Search</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="item">
+                    <div class="Menu">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
-        </figure>
-        
+        </header>
+        <div class="container_main">
+            <div class="item wrap">
+                <!-- 회색 레이아웃 화면 -->
+                <!-- 1 -->
+                <div class="container">
+                    <div class="design rotate">
+                        <div class="layer one move"></div>
+                        <div class="layer thr move">
+                            <div>
+                                <div class="top">
+                                </div>
+                                <div class="top_2">
+                                    <div class="icon">
+                                        <img src="icon1.svg" alt="">
+                                    </div>
+                                    <p>Page title</p>
+                                    <div class="icon_2">
+                                        <img src="icon3.svg" alt="">
+                                    </div>
+                                    <div class="icon_3">
+                                        <img src="icon2.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layer fou move">
+                            <div>
+                                <div class="card card1">
+                                    <img src="EWnhIdXmXHI.jpg" alt="">
+                                    <div class="detail">
+                                        <h2>Title goes here</h2>
+                                        <p class="sub">Secondary text</p>
+                                        <p class="main">Greyhound divisively hello coldly wonderfully
+                                            marginally far upon excluding.</p>
+                                        <span>ACTION 1</span>
+                                        <span>ACTION 2</span>
+                                    </div>
+                                </div>
+                                <div class="card card2">
+                                    <img src="EWnhIdXmXHI.jpg" alt="">
+                                    <div class="detail">
+                                        <h2>Title goes here</h2>
+                                        <p class="sub">Secondary text</p>
+                                        <p class="main">Greyhound divisively hello coldly wonderfully
+                                            marginally far upon excluding.</p>
+                                        <span>ACTION 1</span>
+                                        <span>ACTION 2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layer two move">
+                            <div>
+                                <div>&#43;</div>
+                            </div>
+                        </div>
+                        <div class="layer fiv move">
+                            <div>
+                                <div class="alarm_1">
+                                    <p>Terms of service</p>
+                                    <p>Privacy policy</p>
+                                </div>
+                                <div class="alarm_2">
+                                    <p>Your stat has been archived.</p>
+                                    <span>UNDO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- 2 -->
+                <h1>Elevation</h1>
+                <p>Elevation is the relative distance between two surfaces along the z-axis.</p>
+                <div><span>Environment</span>
+                    <span>Elevation</span></div>
+            </div>
+            <div class="item dark_wrap dark ease">
+                <!-- 3 -->
+                <!-- 다크모드 화면 -->
+                <div class="container_2 dark ease">
+                    <div class="body">
+                        <div class="top dark ease"></div>
+                        <div class="top2 dark ease">
+                            <p>Analytics</p>
+                            <div class="icon3 ease">
+                                <img src="sun.svg" alt="">
+                            </div>
+                        </div>
+                        <h3  class="dark ease" >weekly stats</h3>
+                        <div class="gridWrap">
+                            <div class="item dark ease">
+                                <p class="smalltext1 dark ease">marketing</p>
+                                <h4>23.4M</h4>
+                            </div>
+                            <div class="item dark ease">
+                                <p class="smalltext2 dark ease">nversion</p>
+                                <h4>32.1M</h4>
+                            </div>
+                            <div class="item dark ease">
+                                <p class="smalltext3 dark ease">Conversion</p>
+                                <h4>537</h4>
+                                <div class="graphWrap">
+                                    <div class="graph dark ease"></div>
+                                    <div class="graph dark ease"></div>
+                                    <div class="graph dark ease"></div>
+                                    <div class="graph dark ease"></div>
+                                    <div class="graph dark ease"></div>
+                                    <div class="graph dark ease"></div>
+                                    <div class="graph dark ease"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- 4 -->
+            </div>
+            <div class="item">
+                <!-- 5 -->
+                <h1>Dark theme</h1>
+                <p>A dark theme is a low-light UI that displays mostly dark surfaces.</p>
+                <div><span>Color</span>
+                    <span>Dark theme</span></div>
+            </div>
+            <div class="item">
+                <!-- 6 -->
+                <div class="left">
+                    <img src="left.svg" alt="">
+                    <span>Previous project</span>
+                </div>
+            </div>
+            <div class="item">
+                <!-- 7 -->
+            </div>
+            <div class="item">
+                <!-- 8 -->
+            </div>
+            <div class="item">
+                <!-- 9 -->
+                <div class="right">
+                    <span>Next project</span>
+                    <img src="right.svg" alt="">
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="main.js"></script>
     <script>
-        
+
     </script>
 </body>
 
