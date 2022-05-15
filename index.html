@@ -16,182 +16,252 @@
 
 <body>
     <main>
-        <div class="aside">
-            <div class="Menu">
-                <div class="Menu_one"></div>
-                <div class="Menu_two"></div>
+        <header class="main_header">
+            <div class="header_menu">
+                <div class="logo">
+                    <a href="#">
+                        Font Heaven
+                    </a>
+                </div>
+                <div class="menu">
+                    <a href="#">추천 폰트</a>
+                    <a href="#">모든 폰트</a>
+                </div>
             </div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </div>
-        <header>
-            <div class="container_header">
-                <div class="item">
-                    <h1>MATERIAL DESIGN</h1>
+            <div class="utility">
+                <a href="#">FAQ</a>
+                <a href="#">&#8285;</a>
+                <div class="darkmode">
+                    <div></div>
                 </div>
-                <div class="item"></div>
-                <div class="item">
-                    <a href="#">Search</a>
-                    <a href="#">Contact</a>
+                <div class="families"></div>
+            </div>
+        </header>
+        <header class="sub_header">
+            <div class="left_util">
+                <form class="search">
+                    <input type="text" placeholder="원하는 폰트 검색하기">
+                    <input type="submit" value=" ">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </form>
+                <input type="text" onkeyup='Text()' id="textBox" placeholder="아무 말이나 일단 적어보세요">
+            </div>
+            <div class="right_util">
+                <div>
+                    <form class="selector">
+                        <select name="font" id="font">
+                            <option value="8">8px</option>
+                            <option value="12">12px</option>
+                            <option value="14">14px</option>
+                            <option value="20">20px</option>
+                            <option value="24">24px</option>
+                            <option value="32">32px</option>
+                            <option value="40">40px</option>
+                            <option value="64">64px</option>
+                            <option value="96">96px</option>
+                        </select>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </form>
+                    <div class="range_div">
+                        <input type="range" name="fontsize" value="36" min="12" max="92" step="1">
+                        <div class="range_gray"></div>
+                    </div>
+                    <div class="text_line">
+                        <div class="left" onclick="left()" style="text-align: left;">
+                            <div class="selectColor"></div><div class="selectColor"></div><div class="selectColor"></div>
+                        </div>
+                        <div class="center" onclick="center()" style="text-align: center;">
+                            <div></div><div></div><div></div>
+                        </div>
+                        <div class="right" onclick="right()" style="text-align: right;">
+                            <div></div><div></div><div></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
+                <div>
+                    <div class="license">
+                        <select name="selector_2" id="font">
+                            <option disabled selected>허용범위</option>
+                            <option value="one">포장지</option>
+                            <option value="two">임베딩</option>
+                            <option value="three">BI/CI</option>
+                            <option value="four">OFL</option>
+                        </select>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="license">
+                        <select name="selector_2" id="font">
+                            <option disabled selected>폰트형태</option>
+                            <option value="one">고딕</option>
+                            <option value="two">명조</option>
+                            <option value="three">손글씨</option>
+                            <option value="four">장식체</option>
+                        </select>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
         </header>
         <div class="container_main">
-            <div class="item wrap">
-                <!-- 회색 레이아웃 화면 -->
-                <!-- 1 -->
-                <div class="container">
-                    <div class="design rotate">
-                        <div class="layer one move"></div>
-                        <div class="layer thr move">
-                            <div>
-                                <div class="top">
-                                </div>
-                                <div class="top_2">
-                                    <div class="icon">
-                                        <img src="icon1.svg" alt="">
-                                    </div>
-                                    <p>Page title</p>
-                                    <div class="icon_2">
-                                        <img src="icon3.svg" alt="">
-                                    </div>
-                                    <div class="icon_3">
-                                        <img src="icon2.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layer fou move">
-                            <div>
-                                <div class="card card1">
-                                    <img src="EWnhIdXmXHI.jpg" alt="">
-                                    <div class="detail">
-                                        <h2>Title goes here</h2>
-                                        <p class="sub">Secondary text</p>
-                                        <p class="main">Greyhound divisively hello coldly wonderfully
-                                            marginally far upon excluding.</p>
-                                        <span>ACTION 1</span>
-                                        <span>ACTION 2</span>
-                                    </div>
-                                </div>
-                                <div class="card card2">
-                                    <img src="EWnhIdXmXHI.jpg" alt="">
-                                    <div class="detail">
-                                        <h2>Title goes here</h2>
-                                        <p class="sub">Secondary text</p>
-                                        <p class="main">Greyhound divisively hello coldly wonderfully
-                                            marginally far upon excluding.</p>
-                                        <span>ACTION 1</span>
-                                        <span>ACTION 2</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layer two move">
-                            <div>
-                                <div>&#43;</div>
-                            </div>
-                        </div>
-                        <div class="layer fiv move">
-                            <div>
-                                <div class="alarm_1">
-                                    <p>Terms of service</p>
-                                    <p>Privacy policy</p>
-                                </div>
-                                <div class="alarm_2">
-                                    <p>Your stat has been archived.</p>
-                                    <span>UNDO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="font_Sorting">
+                <h4>모두 8 개의 폰트</h4>
+                <div class="Sorting">
+                    <p>정렬기준</p>
+                    <p class="line"></p>
+                    <span class="selected">최신</span>
+                    <span>조회순</span>
+                    <span>인기순</span>
+                    <span>이름순</span>
                 </div>
             </div>
-            <div class="item">
-                <!-- 2 -->
-                <h1>Elevation</h1>
-                <p>Elevation is the relative distance between two surfaces along the z-axis.</p>
-                <div><span>Environment</span>
-                    <span>Elevation</span></div>
-            </div>
-            <div class="item dark_wrap dark ease">
-                <!-- 3 -->
-                <!-- 다크모드 화면 -->
-                <div class="container_2 dark ease">
-                    <div class="body">
-                        <div class="top dark ease">
+            <div class="grid">
+                <div class="item one">
+                    <section class="top">
+                        <p class="name">Roboto</p>
+                        <div class="option">
+                            <span>Variable</span>
+                            <span class="styles">10 styles</span>
                         </div>
-                        <div class="top2 dark ease">
-                            <div class="icon">
-                                <img src="icon1.svg" alt="">
-                            </div>
-                            <p>Analytics</p>
-                            <div class="icon3 ease">
-                                <img src="sun.svg" alt="">
-                            </div>
+                    </section>
+                    <section class="middle">
+                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <p>Designed by <span class="author"></span></p>
                         </div>
-                        <h3  class="dark ease" >weekly stats</h3>
-                        <div class="gridWrap">
-                            <div class="item dark ease">
-                                <p class="smalltext1 dark ease">marketing</p>
-                                <h4>23.4M</h4>
-                            </div>
-                            <div class="item dark ease">
-                                <p class="smalltext2 dark ease">nversion</p>
-                                <h4>32.1M</h4>
-                            </div>
-                            <div class="item dark ease">
-                                <p class="smalltext3 dark ease">Conversion</p>
-                                <h4>537</h4>
-                                <div class="graphWrap">
-                                    <div class="graph dark ease"></div>
-                                    <div class="graph dark ease"></div>
-                                    <div class="graph dark ease"></div>
-                                    <div class="graph dark ease"></div>
-                                    <div class="graph dark ease"></div>
-                                    <div class="graph dark ease"></div>
-                                    <div class="graph dark ease"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
                 </div>
-            </div>
-            <div class="item">
-                <!-- 4 -->
-            </div>
-            <div class="item">
-                <!-- 5 -->
-                <h1>Dark theme</h1>
-                <p>A dark theme is a low-light UI that displays mostly dark surfaces.</p>
-                <div><span>Color</span>
-                    <span>Dark theme</span></div>
-            </div>
-            <div class="item">
-                <!-- 6 -->
-                <div class="left">
-                    <img src="left.svg" alt="">
-                    <span>Previous project</span>
+                <div class="item two">
+                    <section class="top">
+                        <p class="name">Roboto</p>
+                        <div class="option">
+                            <span>Variable</span>
+                            <span class="styles">10 styles</span>
+                        </div>
+                    </section>
+                    <section class="middle">
+                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <p>Designed by <span class="author"></span></p>
+                        </div>
+                    </section>
                 </div>
-            </div>
-            <div class="item">
-                <!-- 7 -->
-            </div>
-            <div class="item">
-                <!-- 8 -->
-            </div>
-            <div class="item">
-                <!-- 9 -->
-                <div class="right">
-                    <span>Next project</span>
-                    <img src="right.svg" alt="">
+                <div class="item three">
+                    <section class="top">
+                        <p class="name">Roboto</p>
+                        <div class="option">
+                            <span>Variable</span>
+                            <span class="styles">10 styles</span>
+                        </div>
+                    </section>
+                    <section class="middle">
+                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <p>Designed by <span class="author"></span></p>
+                        </div>
+                    </section>
+                </div>
+                <div class="item four">
+                    <section class="top">
+                        <p class="name">Roboto</p>
+                        <div class="option">
+                            <span>Variable</span>
+                            <span class="styles">10 styles</span>
+                        </div>
+                    </section>
+                    <section class="middle">
+                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <p>Designed by <span class="author"></span></p>
+                        </div>
+                    </section>
+                </div>
+                <div class="item five">
+                    <section class="top">
+                        <p class="name">Roboto</p>
+                        <div class="option">
+                            <span>Variable</span>
+                            <span class="styles">10 styles</span>
+                        </div>
+                    </section>
+                    <section class="middle">
+                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <p>Designed by <span class="author"></span></p>
+                        </div>
+                    </section>
+                </div>
+                <div class="item six">
+                    <section class="top">
+                        <p class="name">Roboto</p>
+                        <div class="option">
+                            <span>Variable</span>
+                            <span class="styles">10 styles</span>
+                        </div>
+                    </section>
+                    <section class="middle">
+                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <p>Designed by <span class="author"></span></p>
+                        </div>
+                    </section>
+                </div>
+                <div class="item seven">
+                    <section class="top">
+                        <p class="name">Roboto</p>
+                        <div class="option">
+                            <span>Variable</span>
+                            <span class="styles">10 styles</span>
+                        </div>
+                    </section>
+                    <section class="middle">
+                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <p>Designed by <span class="author"></span></p>
+                        </div>
+                    </section>
+                </div>
+                <div class="item eight">
+                    <section class="top">
+                        <p class="name">Roboto</p>
+                        <div class="option">
+                            <span>Variable</span>
+                            <span class="styles">10 styles</span>
+                        </div>
+                    </section>
+                    <section class="middle">
+                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
+                    </section>
+                    <section class="bottom">
+                        <div>
+                            <p>Designed by <span class="author"></span></p>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="SNS">
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="Copy">
+                Copyright © 2021 Indian Type Foundry. All right reserved
+            </div>
+        </footer>
     </main>
 
     <script src="main.js"></script>
