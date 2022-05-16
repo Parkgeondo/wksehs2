@@ -201,6 +201,10 @@ select::-ms-expand {
     margin-left: -16px;
 }
 
+select[name=font] option {
+    color: #000;
+}
+
 .range_div {
     margin-right: 46px;
     position: relative;
