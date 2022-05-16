@@ -63,6 +63,21 @@
     font-size: 16px;
     text-decoration: none;
     color: var(--font-color);
+    position: relative;
+}
+
+.main_header .header_menu .menu a:hover::before{
+    height: 2px;
+    
+}
+.main_header .header_menu .menu a::before{
+    content: '';
+    position: absolute;
+    height: 0px;
+    bottom: -25px;
+    width: 100%;
+    background-color: var(--font-color);
+    transition: all 0.2s ease-in-out;
 }
 
 .main_header .utility{
@@ -74,6 +89,8 @@
     text-decoration: none;
     color: var(--font-color);
 }
+
+
 
 /* 다크모드 */
 .darkmode{
