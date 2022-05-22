@@ -15,256 +15,166 @@
 </head>
 
 <body>
-    <main>
+    <main class="parallax">
         <header class="main_header">
-            <div class="header_menu">
-                <div class="logo">
-                    <a href="#">
-                        Font Heaven
-                    </a>
-                </div>
-                <div class="menu">
-                    <a href="#">추천 폰트</a>
-                    <a href="#">모든 폰트</a>
-                </div>
+            <div class="logo">
+                <img src="image/logo.svg" alt="">
             </div>
-            <div class="utility">
-                <a href="#">FAQ</a>
-                <a href="#">&#8285;</a>
-                <div class="darkmode">
-                    <div></div>
-                </div>
-                <div class="families"></div>
-            </div>
-        </header>
-        <header class="sub_header">
-            <div class="left_util">
-                <form class="search">
-                    <input type="text" placeholder="원하는 폰트 검색하기">
-                    <input type="submit" value=" ">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </form>
-                <input type="text" onkeyup='Text()' id="textBox" placeholder="원하는 내용 적기">
-            </div>
-            <div class="right_util">
-                <div>
-                    <form class="selector">
-                        <select name="font" id="font">
-                            <option value="8">8px</option>
-                            <option value="12">12px</option>
-                            <option value="14">14px</option>
-                            <option value="20">20px</option>
-                            <option value="24">24px</option>
-                            <option value="32">32px</option>
-                            <option value="40">40px</option>
-                            <option value="64">64px</option>
-                            <option value="96">96px</option>
-                        </select>
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
-                    </form>
-                    <div class="range_div">
-                        <input type="range" name="fontsize" value="36" min="12" max="92" step="1">
-                        <div class="range_gray"></div>
-                    </div>
-                    <div class="text_line">
-                        <div class="left" onclick="left()" style="text-align: left;">
-                            <div class="selectColor"></div><div class="selectColor"></div><div class="selectColor"></div>
-                        </div>
-                        <div class="center" onclick="center()" style="text-align: center;">
-                            <div></div><div></div><div></div>
-                        </div>
-                        <div class="right" onclick="right()" style="text-align: right;">
-                            <div></div><div></div><div></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="license">
-                        <select name="selector_2" id="font">
-                            <option disabled selected>허용범위</option>
-                            <option value="one">포장지</option>
-                            <option value="two">임베딩</option>
-                            <option value="three">BI/CI</option>
-                            <option value="four">OFL</option>
-                        </select>
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="license">
-                        <select name="selector_2" id="font">
-                            <option disabled selected>폰트형태</option>
-                            <option value="one">고딕</option>
-                            <option value="two">명조</option>
-                            <option value="three">손글씨</option>
-                            <option value="four">장식체</option>
-                        </select>
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
-                    </div>
-                </div>
+            <div class="menu">
+                <a href="#">work</a>
+                <a href="#">services</a>
+                <a href="#">about</a>
+                <a href="#">contact</a>
             </div>
         </header>
         <div class="container_main">
-            <div class="font_Sorting">
-                <h4>모두 8 개의 폰트</h4>
-                <div class="Sorting">
-                    <p>정렬기준</p>
-                    <p class="line"></p>
-                    <span class="selected">최신</span>
-                    <span>조회순</span>
-                    <span>인기순</span>
-                    <span>이름순</span>
-                </div>
+            <div class="h1para">
+                <h1 class="para" id="para1">
+                    NATIONAL GEOGRAPHIC <img src="image/loop.svg" alt=""> NATIONAL GEOGRAPHIC <img src="image/loop.svg"
+                        alt="">
+                </h1>
             </div>
-            <div class="grid">
-                <div class="item one">
-                    <section class="top">
-                        <p class="name">Roboto</p>
-                        <div class="option">
-                            <span>Variable</span>
-                            <span class="styles">10 styles</span>
-                        </div>
-                    </section>
-                    <section class="middle">
-                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
-                    </section>
-                    <section class="bottom">
-                        <div>
-                            <p>Designed by <span class="author">Google</span></p>
-                        </div>
-                    </section>
-                </div>
-                <div class="item two">
-                    <section class="top">
-                        <p class="name">Nanum Gothic</p>
-                        <div class="option">
-                            <span>Variable</span>
-                            <span class="styles">10 styles</span>
-                        </div>
-                    </section>
-                    <section class="middle">
-                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
-                    </section>
-                    <section class="bottom">
-                        <div>
-                            <p>Designed by <span class="author">Sandoll</span></p>
-                        </div>
-                    </section>
-                </div>
-                <div class="item three">
-                    <section class="top">
-                        <p class="name">Nanum Myeongjo</p>
-                        <div class="option">
-                            <span>Variable</span>
-                            <span class="styles">10 styles</span>
-                        </div>
-                    </section>
-                    <section class="middle">
-                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
-                    </section>
-                    <section class="bottom">
-                        <div>
-                            <p>Designed by <span class="author">Sandoll</span></p>
-                        </div>
-                    </section>
-                </div>
-                <div class="item four">
-                    <section class="top">
-                        <p class="name">Yeon Sung</p>
-                        <div class="option">
-                            <span>Variable</span>
-                            <span class="styles">10 styles</span>
-                        </div>
-                    </section>
-                    <section class="middle">
-                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
-                    </section>
-                    <section class="bottom">
-                        <div>
-                            <p>Designed by <span class="author">Fontrix</span></p>
-                        </div>
-                    </section>
-                </div>
-                <div class="item five">
-                    <section class="top">
-                        <p class="name">Hahmlet</p>
-                        <div class="option">
-                            <span>Variable</span>
-                            <span class="styles">10 styles</span>
-                        </div>
-                    </section>
-                    <section class="middle">
-                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
-                    </section>
-                    <section class="bottom">
-                        <div>
-                            <p>Designed by <span class="author">Hypertype</span></p>
-                        </div>
-                    </section>
-                </div>
-                <div class="item six">
-                    <section class="top">
-                        <p class="name">Black Han Sans</p>
-                        <div class="option">
-                            <span>Variable</span>
-                            <span class="styles">10 styles</span>
-                        </div>
-                    </section>
-                    <section class="middle">
-                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
-                    </section>
-                    <section class="bottom">
-                        <div>
-                            <p>Designed by <span class="author">Zess Type</span></p>
-                        </div>
-                    </section>
-                </div>
-                <div class="item seven">
-                    <section class="top">
-                        <p class="name">Gugi</p>
-                        <div class="option">
-                            <span>Variable</span>
-                            <span class="styles">10 styles</span>
-                        </div>
-                    </section>
-                    <section class="middle">
-                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
-                    </section>
-                    <section class="bottom">
-                        <div>
-                            <p>Designed by <span class="author">TAE System & Typefaces Co.</span></p>
-                        </div>
-                    </section>
-                </div>
-                <div class="item eight">
-                    <section class="top">
-                        <p class="name">East Sea Dokdo</p>
-                        <div class="option">
-                            <span>Variable</span>
-                            <span class="styles">10 styles</span>
-                        </div>
-                    </section>
-                    <section class="middle">
-                        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는
-                    </section>
-                    <section class="bottom">
-                        <div>
-                            <p>Designed by <span class="author">YoonDesign Inc
-                            </span></p>
-                        </div>
-                    </section>
-                </div>
+            <div class="middle_font">
+                <span>feel</span>
+                <span>your</span>
+                <span>blue</span>
+                <span>ocean.</span>
+            </div>
+            <div class="bottom">
+                <p>
+                    <span>Find us at</span><br>104 Seoul Jong-ro<br>Every day from<br>11am~9am
+                </p>
+            </div>
+            <div class="info">
+                <p>Disney® (SEONGSU)</p>
+                <p>Disney® SEONGSU OFFICIALLY OPENED ITS DOORS ON THE LAST DAY OF APRIL. © 2022</p>
             </div>
         </div>
-        <footer>
-            <div class="SNS">
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-            <div class="Copy">
-                Copyright © 2021 Indian Type Foundry. All right reserved
-            </div>
-        </footer>
     </main>
+    <div class="asd">
+        <section class="one">
+            <h2>get sea</h2>
+            <div class="wide-Able-Image">
+                <div class="flexable-Image">
+                </div>
+            </div>
+            <h2>in your mind</h2>
+            <div class="DFY">
+                <div class="box">
+                    <p>National Geographic’s nonprofit work
+                        The National Geographic Society invests in innovative leaders in science, exploration, education
+                        and storytelling to illuminate and protect the wonder of our world.
+                    </p>
+                    <div class="info2">
+                        내셔널 지오그래픽 소사이어티는 과학, 탐험, 교육, 스토리텔링 <br> 분야의 혁신적인 리더들에게 투자하여 우리 세계의 경이로움을 조명하고 보호합니다.
+                    </div>
+                </div>
 
+            </div>
+        </section>
+        <section class="two">
+            <div>
+                <p class="para" id="para2">Subscribe for full access to read stories from National Geographic.</p>
+                <p class="para" id="para3">Subscribe for full access to read stories from National Geographic.</p>
+            </div>
+        </section>
+        <section class="three">
+            <div class="grid-wrap">
+                <div class="item">
+                    <div class="item-card">
+                        <div>
+                            <figure></figure>
+                        </div>
+                        <figcaption>Leatherback Turtle | Nat Geo Photo of the Day<span>Read</span></figcaption>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-card">
+                        <div>
+                            <figure></figure>
+                        </div>
+                        <figcaption>Warming Oceans May
+                            <br>Make ‘Nemo’ Harder to Find<span>Read</span></figcaption>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-card">
+                        <div>
+                            <figure></figure>
+                        </div>
+                        <figcaption>THE SURPRISING WATS SHARKS <br>
+                            KEEP THE OCEAN HEALTHY<span>Read</span></figcaption>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-card">
+                        <div>
+                            <figure></figure>
+                        </div>
+                        <figcaption>new seahorse discovered,<br>
+                            first of its kind in adrica<span>Read</span></figcaption>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-card">
+                        <div>
+                            <figure></figure>
+                        </div>
+                        <figcaption>what you can learn<br>
+                            from an ocean<span>Read</span></figcaption>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 배경에 세로줄 -->
+        <div class="back-Flex">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_flex">
+            <div class="flex_one">
+                <h3>GET THE NEWSLETTER</h3>
+                <div class="input_Flex">
+                    <input type="text" placeholder="Email adress"><img src="image/arrow-right.svg" alt="">
+                </div>
+                <h3>FOLLOW US</h3>
+                <div>
+                    <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>
+                    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                </div>
+                <p>Copyright &copy; 2015-2021 National Geographic Partners, LLC All right reserved</p>
+            </div>
+            <div class="flex_two">
+                <h3>PLAN A TRIP</h3>
+                <p>Find a Trip</p>
+                <p>Why travel with us</p>
+                <p>Our Experts</p>
+                <p>Special Offers</p>
+                <p>Lifelong Explorer Program</p>
+            </div>
+            <div class="flex_three">
+                <h3>SUPPORT</h3>
+                <p>Call 1-888-966-8687</p>
+                <p>Contact Us</p>
+                <p>FAQ</p>
+                <p>Travel Insurance</p>
+                <p>Travel Agents</p>
+            </div>
+            <div class="flex_four">
+                <h3>COMPANY</h3>
+                <p>Terms&Conditions</p>
+                <p>Terms od Use</p>
+                <p>Privacy Policy</p>
+                <p>Your Californua Privacy Rights</p>
+                <p>Do Not Sell My Personal Information</p>
+            </div>
+        </div>
+    </footer>
     <script src="main.js"></script>
     <script>
 

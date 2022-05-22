@@ -1,104 +1,97 @@
-const rangeInput = document.querySelector("input[type = 'range']");
-const textBox = document.getElementById('textBox');
-const selectBox = document.querySelector("select[name = 'font']");
-const gray = document.querySelector(".range_gray");
-const leftAlign = document.querySelector(".left");
-const leftAlign_line = document.querySelectorAll(".left div");
-const centerAlign = document.querySelector(".center");
-const centerAlign_line = document.querySelectorAll(".center div");
-const rightAlign = document.querySelector(".right");
-const rightAlign_line = document.querySelectorAll(".right div");
-const image = document.querySelectorAll(".text_line img");
-const middle = document.querySelectorAll(".middle");
-const alps = document.querySelectorAll(".Sorting span");
-const button = document.querySelector(".darkmode");
-const button_in = document.querySelector(".darkmode div");
+const para = document.getElementById("para1");
+const paraBox = document.querySelector(".h1para");
+const parallaxBox = document.querySelector(".parallax");
+const sectionA = document.querySelector(".flexable-Image");
+const sectionABox = document.querySelector(".wide-Able-Image");
+const images = document.querySelectorAll("figure");
 
 
-button.addEventListener("click", function(){
-    button_in.classList.toggle("open");    
+animate(para);
+
+// 움직이는 글씨 효과 - 글씨와 부모 글씨의 넓이를 가지고 마진값을 조절함
+function animate(element) {
+    let elementWidth = element.offsetWidth;
+    let parentWidth = element.parentElement.offsetWidth;
+    let flag = 0;
+  
+    setInterval(() => {
+        // flag값을 1일씩 줄여가면서 마진값을 더 낮은 음수로 만듬
+        element.style.marginLeft = --flag + "px";
+        // flag값이 넓이의 반만큼 왔으면
+        if (elementWidth/2 <= -flag) {
+            // 처음으로 다시 돌림
+            flag = 25;
+        }
+        // 프레임
+    }, 20);
+}
+
+//맨위 이미지 패럴렉스
+document.addEventListener("scroll", function(){
+    let offset = window.pageYOffset;
+    parallaxBox.style.backgroundPositionY = offset * 0.18 + "px";
 })
-
-button.addEventListener('click',function(){
-    if (button_in.classList.contains("open")){
-        document.documentElement.setAttribute('color-theme', 'dark');
-        
-    }else {
-      document.documentElement.setAttribute('color-theme', 'light');
-    }
-  });
-
-alps.forEach(alp => {
-    alp.addEventListener("click", function(){
-      alps.forEach(alp =>{
-        alp.classList.remove("selected");      
+//아래 이미지 패럴렉스
+document.addEventListener("scroll", function(){
+    images.forEach(image => {
+        let sectionBTop = image.getBoundingClientRect().top;
+        let sectionBMid = sectionBTop + image.getBoundingClientRect().height/2;
+        let windowH = window.innerHeight;
+        let height = windowH - sectionBMid- 800;
+        image.style.backgroundPositionY = height * 0.1 + "px";
       })
-      alp.classList.add("selected");
-    })
-  })
-
-rangeInput.addEventListener("input", function () {
-    for (i = 0; i < middle.length; i++) {
-        middle[i].style.fontSize = this.value + "px";
-    }
-    const double = this.value * 19 / 4 - 57;
-    gray.style.width = `${double}px`;
 })
 
-selectBox.addEventListener("change", function () {
-    for (i = 0; i < middle.length; i++) {
-        middle[i].style.fontSize = this.value + "px";
+// document.addEventListener("scroll", function(){
+//     let sectionATop = sectionA.getBoundingClientRect().top;
+//     let sectionAMid = sectionATop + sectionA.getBoundingClientRect().height/2;
+//     let windowMid = window.innerHeight/2;
+//     if((windowMid - sectionAMid) > -10){
+//         sectionA.classList.add("wide")
+//     }else{
+//         sectionA.classList.remove("wide")
+//     }
+// })
+
+//중간이미지 넓게 하기
+document.addEventListener("scroll", function(){
+    let sectionATop = sectionA.getBoundingClientRect().top;
+    let sectionAMid = sectionATop + sectionA.getBoundingClientRect().height/2 + 140;
+    let windowMid = window.innerHeight/2;
+    let gap = windowMid - sectionAMid
+    if(gap > -500 && gap < 0 ){
+        const sectionGap = sectionAMid - windowMid;
+        const sectionGapminus = 500 - sectionGap;
+        const percentage = sectionGap/500;
+        const percentageminus = 1 - percentage;
+        sectionA.style.width = `${50 + percentageminus*50}%`
+        console.log(gap);
+    }else if(gap >= 0){
+        sectionA.style.width = `${100}%`
+    }else if(gap < -500){
+        sectionA.style.width = `${50}%`
     }
 })
 
-function left() {
-    for (i = 0; i < middle.length; i++) {
-        let align = leftAlign;
-        middle[i].style.textAlign = align.style.textAlign;
-    }
-    for (i = 0; i < 3; i++) {
-        leftAlign_line[i].classList.add("selectColor");
-        centerAlign_line[i].classList.remove("selectColor");
-        rightAlign_line[i].classList.remove("selectColor");
-    }
+const sectionB = document.querySelector(".two");
+const p1 = document.getElementById("para2");
+const p2 = document.getElementById("para3");
 
-    // leftAlign.innerHTML = '<img src="icon/left.svg">';
-    // centerAlign.innerHTML = '<img src="icon/middle_un.svg">';
-    // rightAlign.innerHTML = '<img src="icon/right_un.svg">';
-}
-function center() {
-    for (i = 0; i < middle.length; i++) {
-        let align = centerAlign;
-        middle[i].style.textAlign = align.style.textAlign;
+//아래 글씨 움직이기
+document.addEventListener("scroll", function(){
+    // let sectionBTop = sectionB.getBoundingClientRect().top;
+    // let sectionBMid = sectionBTop + sectionB.getBoundingClientRect().height/2;
+    // let windowMid = window.innerHeight/2;
+    // let line = windowMid - sectionBMid;
+    let sectionBTop = sectionB.getBoundingClientRect().top;
+    let sectionBMid = sectionBTop + sectionB.getBoundingClientRect().height/2;
+    let windowMid = window.innerHeight;
+    let line = windowMid - sectionBMid + 120;
+    console.log(line);
+    if(line > -100 && line < 1300 ){
+        p1.style.marginLeft = -line/4 + "px";
+        p2.style.marginLeft = -2000+line/4 + "px";
+    }else if(line >= 0){
+    }else if(line < -500){
     }
-    for (i = 0; i < 3; i++) {
-        leftAlign_line[i].classList.remove("selectColor");
-        centerAlign_line[i].classList.add("selectColor");
-        rightAlign_line[i].classList.remove("selectColor");
-    }
-    // leftAlign.innerHTML = '<img src="icon/left_un.svg">';
-    // centerAlign.innerHTML = '<img src="icon/middle.svg">';
-    // rightAlign.innerHTML = '<img src="icon/right_un.svg">';
-}
-function right() {
-    for (i = 0; i < middle.length; i++) {
-        let align = rightAlign;
-        middle[i].style.textAlign = align.style.textAlign;
-    }
-    for (i = 0; i < 3; i++) {
-        leftAlign_line[i].classList.remove("selectColor");
-        centerAlign_line[i].classList.remove("selectColor");
-        rightAlign_line[i].classList.add("selectColor");
-    }
-    // leftAlign.innerHTML = '<img src="icon/left_un.svg">';
-    // centerAlign.innerHTML = '<img src="icon/middle_un.svg">';
-    // rightAlign.innerHTML = '<img src="icon/right.svg">';
-}
-function Text() {
-    for (i = 0; i < middle.length; i++) {
-        middle[i].innerHTML = textBox.value;
-    }
-}
-
-
-
+})
